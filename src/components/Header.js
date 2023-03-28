@@ -12,13 +12,13 @@ const Header = () => {
     <header>
         <div className="logo">Wade Through Water</div>
         <nav>
-            <ul>
+            <ul className={isMenuOpen ? 'show' : ''}>
                 <li>Home</li>
                 <li>Services</li>
                 <li>Contact</li>
             </ul>
         </nav>
-        <div className="hamburger">
+        <div className="hamburger" onClick={handleMenuToggle}>
             <span></span>
             <span></span>
             <span></span>
