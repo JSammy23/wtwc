@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Header = () => {
+
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    function handleMenuToggle() {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
   return (
     <header>
         <div className="logo">Wade Through Water</div>
@@ -11,6 +18,11 @@ const Header = () => {
                 <li>Contact</li>
             </ul>
         </nav>
+        <div className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
   )
 }

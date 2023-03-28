@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'dancingScript';
+  src: url('assets/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+
 :root {
   --ac-blue: #0369A1;
   --ac-light-blue: #38BDF8;
@@ -19,8 +24,13 @@ body {
 
 li {
   list-style-type: none;
-  cursor: pointer;
   /* Remove when Links are added */
+  cursor: pointer;
+}
+
+/* Remove when Links are added */
+li:hover {
+  color: var(--ac-light-blue);
 }
 
 /* Header */
@@ -29,10 +39,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5em;
+  padding: 1.2em;
   background-color: var(--ac-blue);
   color: var(--text-light);
-  font-size: 1.2em;
+  font-size: 1.4em;
+  font-family: sans-serif;
 }
 
 nav > ul {
@@ -42,4 +53,52 @@ nav > ul {
 
 .logo {
   font-size: 2em;
+  font-family: 'dancingScript', sans-serif;
+  font-weight: 500;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+
+  nav ul.show {
+    display: block;
+  }
+
+  nav li {
+    margin: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-top: .5em;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 2em;
+    height: .3em;
+    margin-bottom: .6em;
+    position: relative;
+    background: #fff;
+    border-radius: 3px;
+    z-index: 1;
+  }
+
+  .hamburger span:nth-child(2) {
+    transform: translateY(-6px);
+  }
+
+  .hamburger span:nth-child(3) {
+    transform: translateY(-12px);
+  }
 }
