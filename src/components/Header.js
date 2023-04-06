@@ -15,6 +15,7 @@ const Header = () => {
             <ul className={isMenuOpen ? 'show' : ''}>
                 <li>Home</li>
                 <li>Services</li>
+                <li>About Me</li>
                 <li>Contact</li>
             </ul>
         </nav>
