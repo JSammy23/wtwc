@@ -40,10 +40,11 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1.2em;
-  background-color: var(--ac-blue);
-  color: var(--text-light);
+  background-color: var(--bg-light);
+  color: var(--ac-blue);
   font-size: 1.4em;
   font-family: sans-serif;
+  min-width: 100vw;
 }
 
 nav > ul {
@@ -71,10 +72,10 @@ nav > ul {
     justify-content: center;
     display: flex;
     position: fixed;
-    top: 5.5em;
+    top: 5.6em;
     right: -100%;
     width: 50vw;
-    background-color: var(--ac-blue);
+    background-color: rgba(34, 49, 63, 0.5);
     padding: 1em;
     transition: all 0.3s ease-in-out;
   }
@@ -101,7 +102,7 @@ nav > ul {
     height: .3em;
     margin-bottom: .6em;
     position: relative;
-    background: #fff;
+    background: var(--ac-blue);
     border-radius: 3px;
     z-index: 1;
   }
@@ -113,4 +114,20 @@ nav > ul {
   .hamburger span:nth-child(3) {
     transform: translateY(-12px);
   }
+}
+
+@media only screen and (max-width: 452px) {
+  nav ul {
+    top: 7.25em;
+  }
+}
+
+/* Hero */
+
+.hero {
+  background: #06beb6;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #48b1bf, #06beb6); 
+  background: linear-gradient(to bottom, #48b1bf, #06beb6); 
+  min-width: 100vw;
+  min-height: 40vh;
 }
